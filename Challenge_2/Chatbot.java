@@ -1,7 +1,8 @@
 package Challenge_2;
+
 import java.util.Scanner;
 
-public class Chatbot{
+public class Chatbot {
     public static void main(String[] args) {
         
         //set up scanner. 
@@ -36,5 +37,3 @@ public class Chatbot{
         
     }
 }
-
-
