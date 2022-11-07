@@ -25,7 +25,7 @@ public class Blackjack {
         
         //Task 6 – Get two random cards for the dealer.
         int deal1 = drawRandomCard();
-        int deal2 = drawRandomCard();
+        // int deal2 = drawRandomCard();
         //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
         System.out.println("The dealer shows \n" + cardString(deal1) + "\n and has a card facing down \n" + faceDown());
         //       – Print: \nThe dealer's total is hidden
