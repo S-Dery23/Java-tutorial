@@ -55,11 +55,6 @@ public class Blackjack {
 
     }
 
-    public static int drawRandomCard(){
-        int randomCard = (int) ((Math.random()*13)+1);
-        return randomCard;
-    }
-
     /** Task 1 – make a function that returns a random number between 1 and 13
      * Function name – drawRandomCard
      * @return (int)
@@ -67,6 +62,21 @@ public class Blackjack {
      * Inside the function:
      *   1. Gets a random number between 1 and 13.
      *   2. Returns a card.
+     */
+
+    public static int drawRandomCard(){
+        int randomCard = (int) ((Math.random()*13)+1);
+        return randomCard;
+    }
+    
+
+    /** Task 2 – make a function that returns a String drawing of the card.
+     * Function name – cardString
+     * @param cardNumber (int)
+     * @return (String)
+     *
+     * Inside the function:
+     *   1. Returns a String drawing of the card.
      */
 
     public static String cardString(int cardNumber) {
@@ -167,15 +177,6 @@ public class Blackjack {
         }
     }
 
-    /** Task 2 – make a function that returns a String drawing of the card.
-     * Function name – cardString
-     * @param cardNumber (int)
-     * @return (String)
-     *
-     * Inside the function:
-     *   1. Returns a String drawing of the card.
-     */
-
     public static String faceDown() {
         return
         "   _____\n"+
@@ -185,6 +186,17 @@ public class Blackjack {
         "  |  J  |\n"+
         "  |_____|\n";
     }
+    
+    /** Task 7 – make a function that asks the user to hit or stay.
+     * Function name – hitOrStay
+     * @return (String)
+     *
+     * Inside the function:
+     *   1. Asks the user to hit or stay.
+     *   2. If the user doesn't enter "hit" or "stay", keep asking them to try again by printing:
+     *      Please write 'hit' or 'stay'
+     *   3. Returns the user's option 
+     */
 
     public static String hitOrStay(){
         System.out.println("Choose hit or stay");
@@ -203,15 +215,4 @@ public class Blackjack {
         }
         return choice;
     }
-    
-    /** Task 7 – make a function that asks the user to hit or stay.
-     * Function name – hitOrStay
-     * @return (String)
-     *
-     * Inside the function:
-     *   1. Asks the user to hit or stay.
-     *   2. If the user doesn't enter "hit" or "stay", keep asking them to try again by printing:
-     *      Please write 'hit' or 'stay'
-     *   3. Returns the user's option 
-     */
 }
