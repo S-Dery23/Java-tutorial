@@ -21,7 +21,7 @@ public class Blackjack {
         //Task 5 – Print the sum of your hand value.
         System.out.println(total);
         //       – print: your total is: <hand value>
-        System.out.println("Your hand value is \n " + cardString(random1 + random2) + "\n");
+        System.out.println("Your hand value is \n " + cardString(total) + "\n");
         
         //Task 6 – Get two random cards for the dealer.
         int deal1 = drawRandomCard();
