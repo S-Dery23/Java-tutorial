@@ -9,7 +9,11 @@ public class Main {
         System.out.println("Name: " + person.getName() + "\n" + "Nationality: " + person.getNationality() + "\n" + "Date of Birth: "
          + person.getDob() + "\n" + "Seat Number: " + person.getSeatNumber() + "\n");
 
-        
+        if (person.applyPassport()) {
+            System.out.println("Congratulations " + person.getName() + " your passport has been approved");
+        } else {
+            System.out.println("Sorry " + person.getName() + " we were not able to process your passport");
+        }
     
     }
 
