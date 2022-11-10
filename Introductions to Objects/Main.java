@@ -9,6 +9,15 @@ public class Main{
         System.out.println("Price: " + hyundai.getPrice());
         System.out.println("Year Model : " + hyundai.getYearModel());
 
+        System.out.println("");
+        hyundai.setBrand("Elantra");
+        hyundai.setPrice(75000);
+        hyundai.setYearModel(2021);
+
+        System.out.println("Car Type: " + hyundai.getBrand());
+        System.out.println("Price: " + hyundai.getPrice());
+        System.out.println("Year Model : " + hyundai.getYearModel());
+
     }
 }
 
