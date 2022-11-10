@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // import java.util.Arrays;
 
 public class Person {
@@ -35,9 +37,9 @@ public class Person {
         return dob;
     }
 
-    // public String[] getPassport(String[] passport) {
-    //     return Array.copyOf(passport, passport.length);
-    // }
+    public String[] getPassport(String[] passport) {
+        return Arrays.copyOf(passport, passport.length);
+    }
 
     public int getSeatNumber(){
         return seatNumber;
