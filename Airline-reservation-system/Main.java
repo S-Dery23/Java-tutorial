@@ -1,4 +1,4 @@
-// import java.util.Arrays;
+import java.util.Arrays;
 
 public class Main {
 
@@ -6,8 +6,9 @@ public class Main {
         // String[] passport = {"Rayan Slim", "Canadian", "01//01//1111"};
         Person person = new Person("Rayan Slim", "Canadian", "01//01//1111", 10);
 
-        System.out.println("Name: " + person.getName() + "\n" + "Nationality: " + person.getNationality() + "\n" + "Date of Birth: "
-         + person.getDob() + "\n" + "Seat Number: " + person.getSeatNumber() + "\n");
+        System.out.println("Name: " + person.getName() + "\n" +"Nationality: " + person.getNationality() 
+        + "\n" +"Date of Birth: " + person.getDob() + "\n" +"Seat Number: " + person.getSeatNumber() + "\n" +
+         "Passport: " + Arrays.toString(person.getPassport()) + "\n");
 
         if (person.applyPassport()) {
             System.out.println("Congratulations " + person.getName() + " your passport has been approved");
