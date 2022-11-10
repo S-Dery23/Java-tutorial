@@ -1,4 +1,4 @@
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Person {
     private String name;
@@ -58,10 +58,6 @@ public class Person {
     // public void getPassport(String[] passport) {
     //     
     // }
-
-    public void setSeatNumber(int seatNumber){
-        this.seatNumber = seatNumber;
-    }
 
     public boolean applyPassport() {
         int random = (int) (Math.random()*2);
