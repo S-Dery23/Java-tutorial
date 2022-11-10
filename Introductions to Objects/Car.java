@@ -1,3 +1,5 @@
+import javax.xml.transform.Source;
+
 public class Car {
     private String brand;
     private double price;
@@ -7,6 +9,13 @@ public class Car {
         this.brand = brand;
         this.price = price;
         this.yearModel = yearModel;
+    }
+
+    // source constructor
+    public Car(Car Source){
+        this.brand = Source.brand;
+        this.price = Source.price;
+        this.yearModel = Source.yearModel;
     }
 
     // getters
