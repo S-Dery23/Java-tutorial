@@ -71,4 +71,9 @@ public class Person {
             default: return true;
         }
     }
+
+    public void chooseSeat(){
+        int random = (int) (Math.random()*11 + 1);
+        this.seatNumber = random;
+    }
 }
