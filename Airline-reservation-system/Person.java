@@ -4,7 +4,7 @@ public class Person {
     private String name;
     private String nationality;
     private String dob;
-    private String[] passport;
+    private String[] passport = new String[3];
     private int seatNumber;
 
     public Person(String name, String nationality, String dob, int seatNumber){
