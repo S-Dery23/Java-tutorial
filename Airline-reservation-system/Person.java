@@ -63,4 +63,12 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
+    public boolean applyPassport() {
+        int random = (int) (Math.random()*2);
+        switch (random) {
+            case 0: return false;
+        
+            default: return true;
+        }
+    }
 }
