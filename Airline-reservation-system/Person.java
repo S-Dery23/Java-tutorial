@@ -37,7 +37,7 @@ public class Person {
         return dob;
     }
 
-    public String[] getPassport(String[] passport) {
+    public String[] getPassport() {
         return Arrays.copyOf(passport, passport.length);
     }
 
