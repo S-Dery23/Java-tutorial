@@ -21,7 +21,7 @@ public class Person {
         this.name = source.name;
         this.nationality = source.nationality;
         this.dob = source.dob;
-        // this.passport = Arrays.copyOf(source.passport, source.passport.length);
+        this.passport = Arrays.copyOf(source.passport, source.passport.length);
         this.seatNumber = source.seatNumber;
     }
 
