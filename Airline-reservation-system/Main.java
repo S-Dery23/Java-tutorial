@@ -12,10 +12,14 @@ public class Main {
 
         if (person.applyPassport()) {
             System.out.println("Congratulations " + person.getName() + " your passport has been approved");
+            person.setPassport();
         } else {
             System.out.println("Sorry " + person.getName() + " we were not able to process your passport");
         }
-    
+        
+        System.out.println("Name: " + person.getName() + "\n" +"Nationality: " + person.getNationality() 
+        + "\n" +"Date of Birth: " + person.getDob() + "\n" +"Seat Number: " + person.getSeatNumber() + "\n" +
+         "Passport: " + Arrays.toString(person.getPassport()) + "\n");
     }
 
 }
