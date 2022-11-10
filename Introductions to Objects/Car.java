@@ -9,6 +9,7 @@ public class Car {
         this.yearModel = yearModel;
     }
 
+    // getters
     public String getBrand() {
         return brand;
     }
@@ -21,5 +22,17 @@ public class Car {
         return yearModel;
     }
 
+    // setters
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setYearModel(int yearModel) {
+        this.yearModel = yearModel;
+    }
 
 }
