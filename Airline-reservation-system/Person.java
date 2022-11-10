@@ -57,9 +57,11 @@ public class Person {
         this.dob = dob;
     }
 
-    // public void getPassport(String[] passport) {
-    //     
-    // }
+    public void setPassport() {
+        passport[0] = this.name;
+        passport[1] = this.nationality;
+        passport[2] = this.dob;
+    }
 
     public boolean applyPassport() {
         int random = (int) (Math.random()*2);
