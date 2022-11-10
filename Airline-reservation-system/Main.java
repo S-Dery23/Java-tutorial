@@ -9,12 +9,7 @@ public class Main {
         System.out.println("Name: " + person.getName() + "\n" + "Nationality: " + person.getNationality() + "\n" + "Date of Birth: "
          + person.getDob() + "\n" + "Seat Number: " + person.getSeatNumber() + "\n");
 
-        Person person1 = new Person(person);
-        person1.setName("Jad SLim");
-        person1.setSeatNumber(3);
-
-        System.out.println("Name: " + person1.getName() + "\n" + "Nationality: " + person1.getNationality() + "\n" + "Date of Birth: "
-         + person1.getDob() + "\n" + "Seat Number: " + person1.getSeatNumber() + "\n");
+        
     
     }
 
