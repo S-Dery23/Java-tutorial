@@ -9,6 +9,8 @@ public class Main {
         System.out.println("Name: " + person.getName() + "\n" + "Nationality: " + person.getNationality() + "\n" + "Date of Birth: "
          + person.getDob() + "\n" + "Seat Number: " + person.getSeatNumber() + "\n");
 
+         person.setSeatNumber(10);
+        System.out.println("Seat number is now " + person.getSeatNumber());
     }
 
 }

@@ -28,11 +28,31 @@ public class Person {
     }
 
     // public String[] getPassport(String[] passport) {
-    //     return passport;
+    //     return Array.copyOf(passport, passport.length);
     // }
 
     public int getSeatNumber(){
         return seatNumber;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+    
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    // public void getPassport(String[] passport) {
+    //     
+    // }
+
+    public void setSeatNumber(int seatNumber){
+        this.seatNumber = seatNumber;
     }
 
 }
