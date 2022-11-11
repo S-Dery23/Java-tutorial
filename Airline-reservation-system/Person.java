@@ -76,4 +76,10 @@ public class Person {
         int random = (int) (Math.random()*11 + 1);
         this.seatNumber = random;
     }
+
+    public String printClass() {
+        return "Name: " + name + "\n" +"Nationality: " + nationality 
+        + "\n" +"Date of Birth: " + dob + "\n" +"Seat Number: " + seatNumber + "\n" +
+         "Passport: " + Arrays.toString(passport) + "\n";
+    }
 }
