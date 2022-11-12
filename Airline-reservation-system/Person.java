@@ -77,9 +77,11 @@ public class Person {
         this.seatNumber = random;
     }
 
-    public void printClass() {
-        System.out.println("Name: " + name + "\n" +"Nationality: " + nationality 
-        + "\n" +"Date of Birth: " + dob + "\n" +"Seat Number: " + seatNumber + "\n" +
-         "Passport: " + Arrays.toString(passport) + "\n");
+    public String toString() {
+        return "Name: " + this.name + "\n" + 
+                "Nationality: " + this.nationality + "\n" + 
+                "Date of Birth: " + this.dob + "\n" + 
+                "Seat Number: " + this.seatNumber + "\n" +
+                "Passport: " +  Arrays.copyOf(this.passport, this.passport.length) + "\n";
     }
 }
