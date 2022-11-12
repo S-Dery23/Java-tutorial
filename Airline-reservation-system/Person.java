@@ -82,6 +82,6 @@ public class Person {
                 "Nationality: " + this.nationality + "\n" + 
                 "Date of Birth: " + this.dob + "\n" + 
                 "Seat Number: " + this.seatNumber + "\n" +
-                "Passport: " +  Arrays.copyOf(this.passport, this.passport.length) + "\n";
+                "Passport: " +  Arrays.toString(this.passport) + "\n";
     }
 }
