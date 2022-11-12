@@ -6,7 +6,8 @@ public class Main {
         // String[] passport = {"Rayan Slim", "Canadian", "01//01//1111"};
         Person person = new Person("Rayan Slim", "Canadian", "01//01//1111", 10);
 
-        person.printClass();
+        System.out.println(person);
+        System.out.println(person.toString());
 
         if (person.applyPassport()) {
             System.out.println("Congratulations " + person.getName() + " your passport has been approved");
@@ -15,7 +16,8 @@ public class Main {
             System.out.println("Sorry " + person.getName() + " we were not able to process your passport");
         }
 
-        person.printClass();
+        System.out.println(person);
+        System.out.println(person.toString());
     }
 
 }
