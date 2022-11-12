@@ -1,8 +1,13 @@
+import java.util.Arrays;
+
 public class Airline {
-    private Person[] seats;
+    private Person[] people;
     
     public Airline(){
-        seats = new Person[11];
+        people = new Person[11];
     }
 
+    public Person getPerson(int index){
+        return this.people[index];
+    }
 }
