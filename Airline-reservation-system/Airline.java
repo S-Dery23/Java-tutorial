@@ -1,5 +1,5 @@
 public class Airline {
-    
+
     Person[] people; //array that stores Person objects...
 
     public Airline() {
@@ -22,6 +22,13 @@ public class Airline {
         /*
      		While loop logic here
         */
+
+        while (people[index] != null) {
+            System.out.println("\n" + person.getName() + 
+                                ", seat: " + person.getSeatNumber() + 
+                                " is already taken. Please choose another seat.\n");
+        }
+
         people[index] = new Person(person); 
         System.out.println("Thank you " + person.getName() + " for flying with Java airlines. Your seat number is " + person.getSeatNumber() + ".\n");
     }
