@@ -27,6 +27,9 @@ public class Airline {
             System.out.println("\n" + person.getName() + 
                                 ", seat: " + person.getSeatNumber() + 
                                 " is already taken. Please choose another seat.\n");
+
+            person.chooseSeat();
+            index = person.getSeatNumber() - 1;
         }
 
         people[index] = new Person(person); 

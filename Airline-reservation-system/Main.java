@@ -13,7 +13,7 @@ public class Main {
             new Person("Marcus Aurelius", "Rome", "121 AD", 8),
             new Person("Leonidas", "Greece", "540 BC", 9),
             new Person("Sun Tzu", "China", "544 BC", 10),
-            new Person("Hammurabi", "Babylon", "1750 BC", 11),
+            new Person("Hammurabi", "Babylon", "1750 BC", 10),
         };
 
         Airline airline = new Airline();
