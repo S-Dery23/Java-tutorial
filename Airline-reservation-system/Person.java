@@ -1,87 +1,85 @@
 import java.util.Arrays;
 
-// import java.util.Arrays;
-
 public class Person {
     private String name;
     private String nationality;
-    private String dob;
-    private String[] passport = new String[3];
+    private String dateOfBirth;
+    private String[] passport;
     private int seatNumber;
-
-    public Person(String name, String nationality, String dob, int seatNumber){
+ 
+    public Person(String name, String nationality, String dateOfBirth, int seatNumber) {
         this.name = name;
         this.nationality = nationality;
-        this.dob = dob;
-        // this.passport = Arrays.copyOf(passport, passport.length);
+        this.dateOfBirth = dateOfBirth;
         this.seatNumber = seatNumber;
+        this.passport = new String[3];
     }
-
-    public Person (Person source){
+ 
+    public Person(Person source) {
         this.name = source.name;
         this.nationality = source.nationality;
-        this.dob = source.dob;
-        this.passport = Arrays.copyOf(source.passport, source.passport.length);
+        this.dateOfBirth = source.dateOfBirth;
         this.seatNumber = source.seatNumber;
+        this.passport = Arrays.copyOf(source.passport, source.passport.length);
     }
-
+    
     public String getName() {
         return name;
     }
-
+ 
     public String getNationality() {
         return nationality;
     }
-    
-    public String getDob() {
-        return dob;
+ 
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
-
+ 
+    public int getSeatNumber() {
+        return seatNumber;
+    }
+ 
+    public void setName(String name) {
+        this.name = name;
+    }
+ 
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+ 
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+ 
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+ 
     public String[] getPassport() {
         return Arrays.copyOf(passport, passport.length);
     }
 
-    public int getSeatNumber(){
-        return seatNumber;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-    
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
     public void setPassport() {
-        passport[0] = this.name;
-        passport[1] = this.nationality;
-        passport[2] = this.dob;
+        this.passport = new String[] {name, nationality, dateOfBirth};
     }
+
 
     public boolean applyPassport() {
-        int random = (int) (Math.random()*2);
-        switch (random) {
-            case 0: return false;
-        
-            default: return true;
-        }
+        int number = (int) (Math.random() * 2);
+        return number == 1;
     }
 
-    public void chooseSeat(){
-        int random = (int) (Math.random()*11 + 1);
-        this.seatNumber = random;
+    public void chooseSeat() {
+        seatNumber = ((int) (Math.random() * 11 + 1));
     }
 
     public String toString() {
-        return "Name: " + this.name + "\n" + 
-                "Nationality: " + this.nationality + "\n" + 
-                "Date of Birth: " + this.dob + "\n" + 
-                "Seat Number: " + this.seatNumber + "\n" +
-                "Passport: " +  Arrays.toString(this.passport) + "\n";
+        return "Name: " + name + "\n" + "Nationality: " + 
+            nationality + "\n" + "Date of Birth: " + 
+            dateOfBirth + "\n" + "Seat Number: " +
+            seatNumber + "\n" + "Passport: " + 
+            Arrays.toString(passport) + "\n";
     }
+
 }
+

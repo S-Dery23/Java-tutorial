@@ -19,14 +19,11 @@ public class Main {
         Airline airline = new Airline();
 
         for (int i = 0; i < people.length; i++) {
-            airline.setPerson(people[i]);
+            boolean passportApproved = people[i].applyPassport();
+             // TODO: passport logic here
+
+            airline.createReservation(people[i]);
         }
-
-        System.out.println(airline.getPerson(1));
-        System.out.println(airline.getPerson(5));
-        System.out.println(airline.getPerson(10));
-
-        airline.createReservation(people[0]);
      }
 
     
