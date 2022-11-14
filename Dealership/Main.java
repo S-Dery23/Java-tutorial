@@ -42,7 +42,7 @@ public class Main {
                 break;
         
             default:    String decision = scan.nextLine();
-                        if (decision.equals("yes")) {
+                        if (decision.equalsIgnoreCase("yes")) {
                             dealership.sell(choice);
                         }
                 break;
