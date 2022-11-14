@@ -33,9 +33,8 @@ public class Main {
 
         scan.nextLine();
 
-
         // Task 3 - Call the search action.
-
+        dealership.search(name, budget);
         /* Task 4: case 404
                println : Feel free to browse through our collection of cars.\n
                print the dealership.
