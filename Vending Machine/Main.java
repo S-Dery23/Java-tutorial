@@ -1,5 +1,5 @@
 public class Main {
-    
+
     public static void main(String[] args) {
 
         System.out.println("\t************************************************");
@@ -12,6 +12,17 @@ public class Main {
         /     { new Item("Crush", 1.99, 2) , new Item("C-Cola", 1.49, 2), new Item("Berry", 2.49, 1) }
         / };
         */
+
+        Item item = new Item("Pepsi", 1.99, 3);
+        System.out.println(item);
+        
+        Item menu = new Item(item);
+        menu.setName("Coke");
+        item.setName("Fanta");
+        menu.setQuantity(10);
+        System.out.println(item);
+        System.out.println(menu);
+
     }
     
 }
