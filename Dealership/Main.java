@@ -34,7 +34,19 @@ public class Main {
         scan.nextLine();
 
         // Task 3 - Call the search action.
-        dealership.search(name, budget);
+        int choice = dealership.search(name, budget);
+
+        switch (choice) {
+            case 404:   System.out.println("Feel free to browse through our collection of cars.\n");
+                        System.out.println(dealership);
+                break;
+        
+            default:    String decision = scan.nextLine();
+                        if (decision.equals("yes")) {
+                            dealership.sell(choice);
+                        }
+                break;
+        }
         /* Task 4: case 404
                println : Feel free to browse through our collection of cars.\n
                print the dealership.
