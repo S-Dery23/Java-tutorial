@@ -40,9 +40,9 @@ public class Item {
     }
 
     public String toString() {
-        return "Item name: " + this.name + "/n" + 
-                "Item price: " + this.price + "/n" + 
-                "Item quantity: " + this.quantity;
+        return "Item name: " + this.name + "\n" + 
+                "Item price: " + this.price + "\n" + 
+                "Item quantity: " + this.quantity + "\n";
     }
 
 }
