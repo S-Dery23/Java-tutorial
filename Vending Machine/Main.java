@@ -29,9 +29,15 @@ public class Main {
 
             System.out.print("Pick a spot in the row: "); 
             int spot = scan.nextInt();
-            
-            machine.dispense(row, spot);
 
+            if (machine.dispense(row, spot)) {
+                System.out.println("\nEnjoy your drink! Press 1 to purchase another: ");
+                choice = scan.nextInt();
+            } else {
+                System.out.println("\nSorry, we're out of this item. Press 1 to purchase another: ");
+                choice = scan.nextInt();
+            }
+            
             System.out.println("\n" + machine);
         }
 
