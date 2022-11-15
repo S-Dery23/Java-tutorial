@@ -25,9 +25,10 @@ public class Machine {
             temp += "\n";
             temp += "Row " + i + "\n";
             for (int j = 0; j < items[i].length; j++) {
-                temp += items[i][j] + "\n";
+                temp += items[i][j].getName() + " " + items[i][j].getPrice() + " " + items[i][j].getQuantity() + "\t";
             }
         }
+        temp += "\n\t************************************************";
         return temp;
     }
 
