@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 public class Machine {
     
-     Item[][] items;
+     private Item[][] items;
 
     public Machine(Item[][] items){
         this.items = new Item[items.length][items[0].length];
@@ -11,8 +13,14 @@ public class Machine {
             }
         }
         
+    public Item getItem(int row, int spot) {
+        return new Item(this.items[row][spot]);
+    }
     
-    
+    public void setItem(Item item, int row, int spot) {
+        this.items[row][spot] = new Item(item);
+    }
+
     /**
      * Function name – dispense
      * @param row (int)
