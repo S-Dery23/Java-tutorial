@@ -5,23 +5,16 @@ public class Main {
         System.out.println("\t************************************************");
         System.out.println("\t             WELCOME TO JAVA DRINKS!            ");
         System.out.println("\t************************************************");
-        
-        /* Item[][] items = new Item[][] {
-        /     { new Item("Pepsi", 1.99, 3) , new Item("Fresca", 1.49, 3), new Item("Brisk", 2.49, 2) },
-        /     { new Item("Fanta", 1.99, 2) , new Item("Barq's", 1.49, 2), new Item("A & W", 2.49, 3) },
-        /     { new Item("Crush", 1.99, 2) , new Item("C-Cola", 1.49, 2), new Item("Berry", 2.49, 1) }
-        / };
-        */
 
-        Item item = new Item("Pepsi", 1.99, 3);
-        System.out.println(item);
+        Item[][] items = new Item[][] {
+            { new Item("Pepsi", 1.99, 3) , new Item("Fresca", 1.49, 3), new Item("Brisk", 2.49, 2) },
+            { new Item("Fanta", 1.99, 2) , new Item("Barq's", 1.49, 2), new Item("A & W", 2.49, 3) },
+            { new Item("Crush", 1.99, 2) , new Item("C-Cola", 1.49, 2), new Item("Berry", 2.49, 1) }
+        };
         
-        Item menu = new Item(item);
-        menu.setName("Coke");
-        item.setName("Fanta");
-        menu.setQuantity(10);
-        System.out.println(item);
-        System.out.println(menu);
+        Machine machine = new Machine(items);
+
+        System.out.println(machine.items[0][0]);
 
     }
     
