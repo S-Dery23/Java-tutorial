@@ -20,6 +20,15 @@ public class Main {
 
         System.out.println(machine);
 
+        System.out.print("Pick a row: "); 
+        int row = scan.nextInt();
+        System.out.print("Pick a spot in the row: "); 
+        int spot = scan.nextInt();
+
+        machine.dispense(row, spot);
+
+        System.out.println("\n" + machine);
+
         scan.close();
     }
     
