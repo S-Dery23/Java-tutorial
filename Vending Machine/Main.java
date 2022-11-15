@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("\t************************************************");
         System.out.println("\t             WELCOME TO JAVA DRINKS!            ");
@@ -16,6 +20,7 @@ public class Main {
 
         System.out.println(machine);
 
+        scan.close();
     }
     
 }
