@@ -14,11 +14,7 @@ public class Main {
         
         Machine machine = new Machine(items);
 
-        System.out.println(machine.getItem(1, 2));
-
-        machine.setItem(items[0][0], 1, 2);
-
-        System.out.println(machine.getItem(1, 2));
+        System.out.println(machine);
 
     }
     
