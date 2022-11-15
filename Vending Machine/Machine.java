@@ -1,5 +1,16 @@
 public class Machine {
     
+     Item[][] items;
+
+    public Machine(Item[][] items){
+        this.items = new Item[items.length][items[0].length];
+            for (int i = 0; i < items.length; i++) {
+                for (int j = 0; j < items[0].length; j++) {
+                    this.items[i][j] = new Item(items[i][j]);
+                }
+            }
+        }
+        
     
     
     /**
@@ -13,5 +24,7 @@ public class Machine {
      *      • if so: decreases its quantity by one and returns true.
      *      • otherwise: returns false.
      */
+
+    
     
 }
