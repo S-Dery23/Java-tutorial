@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Machine {
     
      private Item[][] items;
@@ -19,6 +17,18 @@ public class Machine {
     
     public void setItem(Item item, int row, int spot) {
         this.items[row][spot] = new Item(item);
+    }
+
+    public String toString() {
+        String temp = "";
+        for (int i = 0; i < items.length; i++) {
+            temp += "\n";
+            temp += "Row " + i + "\n";
+            for (int j = 0; j < items[i].length; j++) {
+                temp += items[i][j] + "\n";
+            }
+        }
+        return temp;
     }
 
     /**
