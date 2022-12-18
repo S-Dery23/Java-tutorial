@@ -21,8 +21,18 @@ public class Main {
         while (true) {
             System.out.println(dealership);
             System.out.print("Enter the spot number of the car you want to buy: "); 
+            if (!scan.hasNextInt()) {
+                scan.nextLine();
+                System.out.println("Invalid input");
+                continue;
+            }
             int spot = scan.nextInt();
-            dealership.sell(spot);    
+            scan.nextLine();
+            if(spot < 0 || spot > dealership.getLength() - 1){
+                System.out.println("Invalid Index");
+                continue;
+            }
+            dealership.sell(spot);
         }
 
        //scan.close();
