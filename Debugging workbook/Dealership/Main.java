@@ -33,9 +33,13 @@ public class Main {
                 continue;
             }else if(dealership.getCar(spot) == null){
                 System.out.println("Empty spot");
-                continue; 
+                continue;    
             }
             dealership.sell(spot); 
+            System.out.println("Type 'yes' to continue shopping");
+            if(!scan.nextLine().equalsIgnoreCase("yes")){
+                break;
+            }
         }
 
        //scan.close();
