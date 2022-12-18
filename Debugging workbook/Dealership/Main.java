@@ -31,8 +31,11 @@ public class Main {
             if(spot < 0 || spot > dealership.getLength() - 1){
                 System.out.println("Invalid Index");
                 continue;
+            }else if(dealership.getCar(spot) == null){
+                System.out.println("Empty spot");
+                continue; 
             }
-            dealership.sell(spot);
+            dealership.sell(spot); 
         }
 
        //scan.close();
