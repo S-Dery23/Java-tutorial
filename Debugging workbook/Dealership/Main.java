@@ -20,6 +20,10 @@ public class Main {
         System.out.println("\n************* JAVA DEALERSHIP *************");
         while (true) {
             System.out.println(dealership);
+            if (dealership.isEmpty()) {
+                System.out.println("Sorry we are out of cars");
+                break;
+            }
             System.out.print("Enter the spot number of the car you want to buy: "); 
             if (!scan.hasNextInt()) {
                 scan.nextLine();
