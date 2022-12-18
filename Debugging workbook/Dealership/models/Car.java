@@ -5,6 +5,9 @@ public class Car {
     private double price;
 
     public Car(String make, double price) {
+        if (make == null || make.isBlank() || price < 0) {
+            throw new IllegalArgumentException("Input proper car make or car price");
+        }
         this.make = make;
         this.price = price;
     }
