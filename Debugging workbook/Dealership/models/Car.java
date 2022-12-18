@@ -25,10 +25,16 @@ public class Car {
     }
 
     public void setMake(String make) {
+        if (make == null || make.isBlank()) {
+            throw new IllegalArgumentException("Input proper car make");
+        }
         this.make = make;
     }
 
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Input proper car price");
+        }
         this.price = price;
     }
 
