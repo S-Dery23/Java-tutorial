@@ -9,11 +9,11 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         
         Car[] cars = new Car[] {
-            new Car("    ", -5000),
-            new Car("    ", 12000),
+            new Car("Ford", 5000),
+            new Car("Hyundai", 12000),
         };
-        cars[1].setMake("    ");
-        cars[1].setPrice(-8500);
+        cars[1].setMake("Honda");
+        cars[1].setPrice(8500);
 
         Dealership dealership = new Dealership(cars);
 
