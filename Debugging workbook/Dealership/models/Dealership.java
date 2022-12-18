@@ -20,8 +20,13 @@ public class Dealership {
 
     
     public void sell(int index) {  
-        this.cars[index].drive();
-        this.cars[index] = null;
+        if (isEmpty()) {
+            throw new IllegalStateException("Dealership is empty");
+        } else {
+            this.cars[index].drive();
+            this.cars[index] = null;
+        }
+            
     }
 
     /**
@@ -32,6 +37,18 @@ public class Dealership {
      *   • returns true if there are no more cars.
      * 
      */
+    public boolean isEmpty() {
+        Boolean choice = true;
+        for (int i = 0; i < cars.length; i++) {
+            if (this.cars[i] == null) {
+                choice = true;
+            } else {
+                choice = false;
+                break;
+            }
+        }
+        return choice;
+    }
 
      
     public String toString() {
