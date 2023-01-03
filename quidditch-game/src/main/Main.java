@@ -1,13 +1,28 @@
 package src.main;
 import src.main.models.Game;
+import src.main.models.Team;
 
 public class Main {
 
     static Game game;
 
     public static void main(String[] args) {
-        System.out.println("hello");
-        
+
+        Team seth = new Team("GRYFFINDOR", "Oliver", "Harry",
+                new String[] {"Angelina", "Ginny", "Katie"});
+
+        Team des = new Team("SLYTHERIN", "Vincent",  "Draco",
+                new String[] {"Bridget", "Harper", "Malcolm"});
+
+        System.out.println(seth);
+        des.toString();
+
+        System.out.println("this is seth's team house " + seth.getHouse());
+
+        System.out.println(des);
+        seth.toString();
+
+        System.out.println("this des team seeker " + des.getSeeker());
     }
 
 
