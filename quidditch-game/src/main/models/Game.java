@@ -37,4 +37,10 @@ public class Game {
     public static int getGameCount() {
         return gameCount;
     }
+
+
+    public String getPlaceholder(String play){
+        return play.substring(play.indexOf('<') + 1, play.indexOf('>'));
+    }
+
 }
