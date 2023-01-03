@@ -8,21 +8,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Team seth = new Team("GRYFFINDOR", "Oliver", "Harry",
+        Team home = new Team("GRYFFINDOR", "Oliver", "Harry",
                 new String[] {"Angelina", "Ginny", "Katie"});
 
-        Team des = new Team("SLYTHERIN", "Vincent",  "Draco",
+        Team away = new Team("SLYTHERIN", "Vincent",  "Draco",
                 new String[] {"Bridget", "Harper", "Malcolm"});
 
-        System.out.println(seth);
-        des.toString();
+        Game game = new Game(home, away);
 
-        System.out.println("this is seth's team house " + seth.getHouse());
+        Game game7 = new Game(home, away);
 
-        System.out.println(des);
-        seth.toString();
+        Game game5 = new Game(home, away);
 
-        System.out.println("this des team seeker " + des.getSeeker());
+        System.out.println(game.getScore(away));
+
+        game.setScore(home, 50);
+
+        System.out.println(Game.getGameCount());
+
     }
 
 
