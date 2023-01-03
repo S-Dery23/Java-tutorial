@@ -1,6 +1,7 @@
 package src.main.models;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Team {
 
@@ -124,4 +125,18 @@ Question: the constants are final, so why can't we make them public? It's not po
                  "Seeker: "  + this.seeker + "\n" +
                  "Chasers: " + Arrays.toString(this.chasers) + "\n";
      }
+
+     public boolean equals(Object obj){
+        if (obj == null || !(obj instanceof Team)){
+            return false;
+        }
+        Team team = (Team) obj;
+        return this.house.equals(team.house) && this.keeper.equals(team.keeper) &&
+                this.seeker.equals(team.seeker) &&
+                Arrays.toString(this.chasers).equals(Arrays.toString(team.chasers));
+     }
+
+    public int hashCode() {
+        return Objects.hash(house, keeper, seeker, Arrays.toString(chasers));
+    }
 }
