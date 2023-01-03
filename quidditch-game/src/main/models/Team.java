@@ -20,17 +20,17 @@ Question: the constants are final, so why can't we make them public? It's not po
 
 */
     public Team(String house, String keeper, String seeker, String[] chasers){
-        if (house == null || house.equals(" ")){
+        if (house == null || house.isBlank()){
             throw new IllegalArgumentException("House should not be null/blank");
         }
         this.house = house;
 
-        if (keeper == null || keeper.equals(" ")){
+        if (keeper == null || keeper.isBlank()){
             throw new IllegalArgumentException("Keeper should not be null/blank");
         }
         this.keeper = keeper;
 
-        if (seeker == null || seeker.equals(" ")){
+        if (seeker == null || seeker.isBlank()){
             throw new IllegalArgumentException("Seeker should not be null/blank");
         }
         this.seeker = seeker;
@@ -49,21 +49,21 @@ Question: the constants are final, so why can't we make them public? It's not po
     }
 
     public void setHouse(String house) {
-        if (house == null || house.equals(" ")){
+        if (house == null || house.isBlank()){
             throw new IllegalArgumentException("House should not be null/blank");
         }
         this.house = house;
     }
 
     public void setKeeper(String keeper) {
-        if (keeper == null || keeper.equals(" ")){
+        if (keeper == null || keeper.isBlank()){
             throw new IllegalArgumentException("Keeper should not be null/blank");
         }
         this.keeper = keeper;
     }
 
     public void setSeeker(String seeker) {
-        if (seeker == null || seeker.equals(" ")){
+        if (seeker == null || seeker.isBlank()){
             throw new IllegalArgumentException("Seeker should not be null/blank");
         }
         this.seeker = seeker;
