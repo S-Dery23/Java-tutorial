@@ -35,7 +35,7 @@ Question: the constants are final, so why can't we make them public? It's not po
         }
         this.seeker = seeker;
 
-        if (chasers.length != 3){
+        if (chasers.length != 3 || Team.hasNull(chasers) || Team.hasBlank(chasers)){
             throw new IllegalArgumentException("The Chasers should be 3");
         }
         this.chasers = Arrays.copyOf(chasers,chasers.length);
@@ -46,6 +46,34 @@ Question: the constants are final, so why can't we make them public? It's not po
         this.keeper = source.keeper;
         this.seeker = source.seeker;
         this.chasers = Arrays.copyOf(source.chasers,source.chasers.length);
+    }
+
+    public void setHouse(String house) {
+        if (house == null || house.equals(" ")){
+            throw new IllegalArgumentException("House should not be null/blank");
+        }
+        this.house = house;
+    }
+
+    public void setKeeper(String keeper) {
+        if (keeper == null || keeper.equals(" ")){
+            throw new IllegalArgumentException("Keeper should not be null/blank");
+        }
+        this.keeper = keeper;
+    }
+
+    public void setSeeker(String seeker) {
+        if (seeker == null || seeker.equals(" ")){
+            throw new IllegalArgumentException("Seeker should not be null/blank");
+        }
+        this.seeker = seeker;
+    }
+
+    public void setChasers(String[] chasers) {
+        if (chasers.length != 3 || Team.hasNull(chasers) || Team.hasBlank(chasers)){
+            throw new IllegalArgumentException("The Chasers should be 3");
+        }
+        this.chasers = Arrays.copyOf(chasers,chasers.length);
     }
 
     public String getHouse(){
@@ -76,14 +104,15 @@ Question: the constants are final, so why can't we make them public? It's not po
          return POSITION_KEEPER;
      }
 
-    /**
-     * Function name: hasNull
-     * @param array
-     * @return (boolean)
-     *
-     * Inside the function:
-     *    1. return false;
-     */
+    public void checkParam(String param) {
+        if (param == null || param.isBlank()) {
+            throw new IllegalArgumentException(param + " cannot be null or blank");
+        }
+    }
+
+    public static boolean hasBlank(String[] array){
+        return Arrays.stream(array).anyMatch((elements) -> elements.isBlank());
+    }
 
     public static boolean hasNull(String[] array){
         return Arrays.stream(array).anyMatch((elements) -> elements == null);
