@@ -23,6 +23,9 @@ public class Game {
     }
 
     public void setScore(Team team, Integer score){
+        if (team == null){
+            throw new IllegalArgumentException("Team should not be null");
+        }
         this.scoreBoard.put(new Team(team), score);
     }
 
