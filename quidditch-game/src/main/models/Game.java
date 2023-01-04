@@ -54,4 +54,31 @@ public class Game {
     public void catchSnitch(Team team){
         setScore(new Team(team), getScore(team) + SNITCH_POINTS);
     }
+
+    public String simulate(String play){
+        String placeHolder = getPlaceholder(play);
+        Team team = getRandomTeam();
+        String value = "";
+        if (placeHolder.equals(Team.getPositionChaser())){
+            quaffleScore(team);
+            value = team.getChasers()[random(team.getChasers().length)];
+        } else if (placeHolder.equals(Team.getPositionSeeker())){
+            catchSnitch(team);
+            value = team.getSeeker();
+        }else if (placeHolder.equals(Team.getPositionKeeper())){
+            value = team.getKeeper();
+        }
+
+        return replacePlaceholder(play, placeHolder, value);
+    }
+
+    public Team getRandomTeam(){
+            Object[] teams = this.scoreBoard.keySet().toArray();
+        return (Team) teams[random(teams.length)];
+    }
+
+    public int random(int range){
+        int random = (int) (Math.random() * range);
+        return random;
+    }
 }
