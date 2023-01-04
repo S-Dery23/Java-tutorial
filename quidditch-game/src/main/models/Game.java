@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class Game {
 
-    private static final Integer QUAFFLE_POINTS = 1;
-    private static final Integer SNITCH_POINTS = 0;
+    private static final Integer QUAFFLE_POINTS = 10;
+    private static final Integer SNITCH_POINTS = 150;
     private HashMap<Team, Integer> scoreBoard;
 
     private static int gameCount;
@@ -43,4 +43,15 @@ public class Game {
         return play.substring(play.indexOf('<') + 1, play.indexOf('>'));
     }
 
+    public String replacePlaceholder(String play, String placeholder, String value){
+        return play.replace("<" + placeholder + ">", value);
+    }
+
+    public void quaffleScore(Team team){
+        setScore(new Team(team), getScore(team) + QUAFFLE_POINTS);
+    }
+
+    public void catchSnitch(Team team){
+        setScore(new Team(team), getScore(team) + SNITCH_POINTS);
+    }
 }
