@@ -6,6 +6,16 @@ public class Savings extends Account{
         super(id, name, balance);
     }
 
+    @Override
+    public void deposit(double amount) {
+
+    }
+
+    @Override
+    public boolean withdraw(double amount) {
+        return false;
+    }
+
     public Savings(Savings source){
         super(source);
     }
