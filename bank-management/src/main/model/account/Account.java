@@ -5,6 +5,9 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 public abstract class Account {
+
+    public abstract Account clone();
+
     private String id;
     private String name;
     private double balance;

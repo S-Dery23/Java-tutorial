@@ -23,5 +23,9 @@ public class Savings extends Account{
         super(source);
     }
 
+    @Override
+    public Account clone() {
+        return new Savings(this);
+    }
 
 }

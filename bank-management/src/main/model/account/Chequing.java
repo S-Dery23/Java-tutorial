@@ -29,6 +29,11 @@ public class Chequing extends Account implements Taxable {
         return true;}
     }
 
+    @Override
+    public Account clone() {
+        return new Chequing(this);
+    }
+
     public Chequing(Chequing source){
         super(source);
     }
