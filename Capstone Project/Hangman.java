@@ -78,7 +78,7 @@ public class Hangman {
             int guess = (int) (Math.random()*64);
             String word = words[guess];
             
-            System.out.println("Your word has " + word.length() + " letters");
+            System.out.println("The animaly has " + word.length() + " letters");
 
             System.out.println("Therefore you have 7 chances to guess word");
             System.out.println("Are you ready");
