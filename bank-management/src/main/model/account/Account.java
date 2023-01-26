@@ -6,8 +6,6 @@ import java.util.Locale;
 
 public abstract class Account {
 
-    public abstract Account clone();
-
     private String id;
     private String name;
     private double balance;
@@ -60,6 +58,8 @@ public abstract class Account {
 
     public abstract void deposit(double amount);
     public abstract boolean withdraw(double amount);
+
+    public abstract Account clone();
 
     protected double round(double amount) {
         DecimalFormat formatter = new DecimalFormat("#.##", new DecimalFormatSymbols(Locale.ENGLISH));
